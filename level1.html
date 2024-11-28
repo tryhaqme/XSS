@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HorseFeed - XSS Training Ground</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <button id="theme-switcher">
+        <i class='bx bx-sun'></i>
+        <span>Toggle Theme</span>
+    </button>
+    <div id="game-container">
+        <header>
+            <h1>HorseFeed</h1>
+            <div id="score-display">Score: <span id="score">0</span></div>
+        </header>
+        
+        <div id="mascot-container">
+            <div id="horse-mascot">
+                <img src="horse.png" alt="Horse Mascot">
+            </div>
+            <div id="mascot-speech"></div>
+            <div id="thought-bubble">
+                <i class='bx bx-brain'></i>
+                <span>I'm very hungry, if I get a cookie...</span>
+            </div>
+        </div>
+
+        <div id="challenge-container">
+            <h2>Level 1: The Stable Search</h2>
+            <div id="challenge-description">
+                In this level, you will learn how to craft a xss payload according to the behavior of the target website.
+            </div>
+            
+            <div id="challenge-playground">
+                <input type="text" id="search-box" autocomplete="off" outline="none" placeholder="Search the stable...">
+                <div id="search-results"></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="horseGame.js"></script>
+<script src="challenges.js"></script>
+<script src="script.js"></script>
+</html> 
